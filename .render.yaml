@@ -1,0 +1,12 @@
+# Render service configuration - forces npm install as the build command
+# Reference: https://render.com/docs/render-yaml
+services:
+  - type: web
+    name: discord-bot
+    env: node
+    plan: free
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    # If your code lives in a subdirectory, set "root": "subdir"
+    # root: ""
