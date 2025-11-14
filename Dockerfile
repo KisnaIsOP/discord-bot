@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci --only=production
+# Try `npm ci` (faster, reproducible) and fall back to `npm install`
+# if a lockfile isn't present or `npm ci` fails in the build environment.
+RUN npm ci --only=production || npm install --only=production
 
 COPY . .
 
