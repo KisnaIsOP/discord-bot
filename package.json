@@ -1,0 +1,23 @@
+{
+  "name": "discord-chatbot",
+  "version": "1.0.0",
+  "description": "A production-ready Discord chatbot using free APIs",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "keywords": ["discord", "bot", "chatbot", "openrouter", "deepseek"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0"
+  }
+}
